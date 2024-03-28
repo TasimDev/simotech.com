@@ -1,0 +1,268 @@
+/*==============HEADER=============*/
+.header {
+    padding: 16px 0px;
+    width: 100%;
+    height: auto;
+    background: transparent;
+    position: fixed;
+    top: 0;
+    transition: var(--transition);
+    z-index: 6;
+
+    &.sticky{
+        background: color(black);
+        .header__logo{
+            color: color(white);
+        }
+        .header__menu {
+            #service-link,.links{
+                color: color(white);
+            }
+            .list-item{
+                &::after{
+                    background: color(white);
+                }
+            }
+        }
+        .contact-btn{
+            color: color(white);
+            .icon{
+
+                background: color(white);
+                color: color(black);
+            }
+        }
+        .header__button-mobile {
+            .line{
+                background: color(white);
+            }
+        }
+    }
+    &__container {
+        justify-content: space-between;
+    }
+    &__logo {
+        position: relative;
+        cursor: pointer;
+        color: color(text-black);
+        font-size: 1.6rem;
+        font-family: var(--logo-font);
+        overflow: hidden;
+        padding: 12px 0;
+        width: 25%;
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        span {
+            font-weight: 800;
+            transition: var(--transition);
+        }
+
+        #logo {
+            position: absolute;
+            width: 50px;
+            transform: translateY(200%);
+            transition: var(--transition);
+        }
+
+        &:hover {
+            span {
+                transform: translateY(-200%);
+            }
+
+            #logo {
+                transform: translateY(0%);
+            }
+        }
+    }
+ .div{
+    display: flex;
+    gap: 3rem;
+}
+    &__menu {
+        width: 50%;
+        gap: 3rem;
+        .service-links,a {
+            color: color(text-black);
+            font-weight: 700;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+      
+        li {
+            padding: 8px 3px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+           
+            &::after {
+                content: '';
+                width: 0%;
+                height: 2px;
+                position: absolute;
+                background: color(black);
+                bottom: 0;
+                transition: var(--transition);
+            }
+
+            &:hover {
+
+                &::after {
+                    width: 100%;
+                }
+
+            }
+        }
+    }
+
+    &__button {
+           width: 25%;
+            color: color(black);
+            font-weight: 700;
+          padding-left: 170px;
+        
+            
+           
+    }
+
+    /*Mobile and Table CSS*/
+    &__button-mobile {
+        width: 30px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 6px;
+        cursor: pointer;
+        transition: var(--transition);
+        display: none;
+
+        .line {
+            width: 100%;
+            height: 2px;
+            background: color(black);
+        }
+    }
+
+    &__button-mobile.active {
+        gap: 0;
+
+        .line {
+            background: color(white);
+        }
+    }
+
+    &__menu-mobile {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background: color(black);
+        top: 80px;
+        right: 0;
+        display: none;
+        flex-direction: column;
+        justify-content: start;
+        padding: 6rem 0;
+        gap: 2rem;
+        transform: translateY(-200%);
+        opacity: 0;
+
+        transition: var(--transition);
+
+        li {
+            .service-links,a {
+                color: color(white);
+                font-size: 1.3rem;
+                font-weight: 600;
+                cursor: pointer;
+            }
+        }
+
+        li.social {
+            text-align: center;
+            margin-top: 10rem;
+
+            p {
+                color: color(text-gray);
+            }
+        }
+     
+    }
+    &__menu-mobile.active {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+#service-menu{
+    position: fixed;
+    top: 0;
+    right: -200%;
+    width: 100%;
+    height: 100%;
+    z-index: 4;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    backdrop-filter: blur(10px);
+    transition: all .3s ease-in-out;
+
+    &.active{
+        right: 0;
+    }
+    .wrapper{
+        background: color(white);
+        width: 40%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: -39px 0px 141px 0px rgba(0, 0, 0, 0.363);
+        
+
+        .container{
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+           justify-content: center;
+            gap: 2rem;
+            position: relative;
+            header{
+                font-size: 1.1rem;
+                p{
+                    margin-top: 1rem;
+                    color: color(text-gray);
+                }
+            }
+            ul{
+               
+                li{
+                   margin-bottom: 1rem;
+                    a{
+                        font-size: 1.2rem;
+                        color: color(text-gray);
+                        font-weight: 600;
+                        transition: all .3s ease-in-out;
+                    }
+                    &:hover{
+                        a{
+                            color: color(black);
+
+                        }
+                    }
+                  
+                }
+            }
+            #close-service-menu{
+                position: absolute;
+                right: 3%;
+                top: 15%;
+                font-size: 1.6rem;
+                cursor: pointer;
+                color: color(black);
+            }
+        }
+    }
+}
+

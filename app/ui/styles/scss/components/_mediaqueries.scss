@@ -1,0 +1,579 @@
+/*=====================MediaQueries==================*/
+/* 
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (max-width: 1200px) {
+    .header {
+
+        &__logo {
+            span {
+                font-size: 1.2rem;
+            }
+
+            #logo {
+                width: 45px;
+                transform: translateY(200%);
+            }
+
+            &:hover {
+                span {
+                    transform: none;
+                }
+
+                #logo {
+                    transform: translateY(200%);
+                }
+
+            }
+
+
+        }
+
+        &__menu {
+            display: none;
+        }
+
+        &__button {
+            display: none;
+        }
+
+        &__button-mobile {
+            display: flex;
+        }
+
+        &__menu-mobile {
+            display: flex;
+        }
+    }
+
+    .header.active {
+        background: color(black);
+
+        .header__logo {
+            span {
+                color: color(white);
+            }
+        }
+    }
+
+    .home {
+        &__title {
+            width: 90%;
+        }
+    }
+    .proccess {
+        &__proccesing {
+            .container {
+                width: 86%;
+
+                .phase {
+                    .number {
+                        width: 20%;
+                    }
+
+                    .text {
+                        width: 70%;
+                    }
+                }
+
+            }
+        }
+    }
+    #contact{
+        .container{
+            .wrapper{
+                width: 80%;
+            }
+        }
+        
+    }
+    #contact-page{
+        #contact-names{
+            .container{
+                header{
+                    width: 100%;
+                    
+                }
+               ul{
+                    width: 100%;
+                }
+                .first,.second{
+                    flex-direction: column;
+                    
+                }
+            }
+        }
+    }
+    #service-menu{
+        .wrapper{
+            width: 100%;
+        }
+    }
+    .service{
+        .service-info{
+            .container{
+                flex-direction: column;
+                gap: 5rem;
+                .service-title{
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+                .info{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 900px){
+    #about{
+       .container{
+        p{
+            width: 100%;
+            font-size: 1.5rem;
+            line-height: 2.8rem;
+          
+        }
+        .neotet{
+            padding: 2px 18px;
+        }
+      
+       }
+    }
+    #quote{
+        header{
+            .title{
+                width: 40%;
+            }
+            .text{
+                width: 60%;
+            }
+        }
+    }
+    #services{
+        .container{
+            main{
+                ul{
+                    li{
+                        flex-direction: column;
+                        align-items: start;
+                        justify-content: center;
+                        gap: 2rem;
+                        header{
+                            width: 100%;
+                        }
+                        main{
+                            width: 100%;
+                        }
+                        button{
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #footer{
+        .footer__container{
+            .footer__center{
+                flex-direction: column;
+            }
+            .footer__socials{
+               flex-direction: column-reverse;
+               gap: 3rem;
+               text-align: center;
+               p{
+                font-size: .8rem;
+               }
+            }
+        }
+    }
+    #contact-page{
+        .container{
+            header{
+                .header-title{
+                    p{
+                        width: 80%;
+                    }
+                }
+            }
+        }
+        #contact-info{
+            .container{
+                flex-direction: column;
+                gap: 3rem;
+    
+                header{
+                    width: 100%;
+                }
+                
+               form{
+                    width: 100%;
+                }
+            }
+        }
+       
+            #contact-names{
+                .container{
+                    gap: 5rem;
+                    header{
+                        width: 100%;
+                        h2{
+                           
+                            font-size: 2.4rem;
+                        }  
+                    }
+                   ul{
+                        width: 100%;
+                      gap: 2rem;
+                        li{
+                            gap: .4rem;
+                            p{
+                                font-size: 1rem;
+                            }
+                        }
+                    }
+                    .first,.second{
+                        flex-direction: column;
+                        gap: 2rem;
+                        header{
+                            font-size: 1.1rem;
+                        }
+                    }
+                    .second{
+                      ul{
+                   li{
+                    gap:2rem;
+                   }
+                      }
+                        header{
+                            a{
+                                font-size: 1.5rem;
+                            }
+                        }
+                    }
+                }
+            }
+    }
+    .service{
+        .service-header{
+            height: 100vh;
+            .container{
+                .service-title{
+                    width: 100%;
+                    color: color(white);
+                    p{
+                        width: 100%;
+                    }
+                }
+            }
+            .image{
+                
+                width: 100%;
+                height: 100%;
+             
+                
+            }
+        }
+        .service-types{
+            ul{
+                animation: animate 100s linear infinite;
+            }
+        }
+        .service-quote{
+            .container{
+                p{
+                    font-size: 1.5rem;
+                }
+            }
+            &.projects{
+              
+                p{  
+                    width: 100%;
+                    font-size: 2rem;
+                    font-weight: 700;
+                    font-family: var(--header-font);
+                }
+            }
+        }
+    }
+    
+}
+@media screen and (max-width: 600px) {
+    .home {
+        &__title {
+            width:90%;
+            h1{
+                font-size: 2.5rem;
+            }
+            p{
+                font-size: 1.3rem;
+            }
+            .text-gray{
+                font-size: 1.1rem;
+            }
+        }
+    }
+    #image{
+        background-position: top;
+    }
+    #about{
+.container{
+    justify-content: start;
+    align-items: start;
+    p{
+        text-align: left;
+    }
+}
+    }
+    #quote{
+        header{
+            flex-direction: column;
+            .title{
+                padding: 1.1rem 0;
+                width: 100%;
+                font-size: 1rem;
+            }
+            .text{
+                padding: 1.1rem 0;
+                width: 100%;
+                font-size: 2.3rem;
+            }
+        }
+    }
+   
+    #contact{
+        .container{
+            .wrapper{
+                width: 100%;
+            }
+        }
+    }
+    #footer{
+        .footer__container{
+            .footer__center{
+                .footer-list{
+                    flex-direction: column;
+                    gap: 3rem;
+                    li{
+                        width: 100%;
+                       
+                    }
+                }
+            }
+            .footer__socials{
+               flex-direction: column-reverse;
+               gap: 3rem;
+               text-align: center;
+            }
+        }
+    }
+    #contact-page{
+        .container{
+            header{
+               
+                .images{
+                    .profile{
+                        width: 60px;
+                        height: 60px;
+                        &:last-child{
+                            top: 0;
+                            left:42px;
+                        }
+                    }
+                }
+                .header-title{
+                    h2{
+                        font-size: 2rem;
+                    }
+                    p{
+                        font-size: 1rem;
+                    }
+                }
+            }
+        }
+        #contact-info{
+            .container{
+                header{
+                    
+                    h2{
+                        font-size: 2rem;
+                        
+                    }
+                }
+            }
+        }
+        #contact-names{
+            .container{
+                ul{flex-direction: column;}
+                .second{
+                    ul{
+                        gap: 4rem;
+                    }
+                }
+            }
+        }
+    }
+    #about-page{
+        main{
+           
+            .container{
+                .team{
+                    .profile{
+                        .department{
+                            width: 30%;
+                        }
+                        .profile-info{
+                            width: 70%;
+                        }
+                    }
+                }
+            }
+        }
+        #quote{
+            header{
+                flex-direction: column;
+                .title{
+                    padding: 1.1rem 0;
+                    width: 100%;
+                    font-size: 1rem;
+                }
+                .text{
+                    padding: 1.1rem 0;
+                    width: 100%;
+                    font-size: 2.3rem;
+                }
+            }
+        }
+    }
+    .service{
+        .service-info{
+            .container{
+                flex-direction: column;
+                gap: 5rem;
+                .service-info-title{
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    text-align: center;
+                }
+                .info{
+                    width: 100%;
+                    .service-info-list{
+                        align-items: center;
+                        justify-content: center;
+                        gap: 3rem;
+                        .service-info-list-item{
+                            width: 90%;
+                           text-align: justify;
+                           
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+/* 
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+@media (max-width: 481px) {
+    .header {
+        &__logo {
+            span {
+                font-size: 1rem;
+            }
+
+            #logo {
+                width: 40px;
+            }
+        }
+
+        &__menu-mobile {
+            top: 70px;
+
+            li.social {
+                margin-top: 5rem;
+
+            }
+        }
+
+    }
+
+    .home {
+        &__title {
+            h1 {
+                font-size: 2rem;
+                line-height: normal;
+            }
+        }
+    }
+
+    .proccess {
+        &__about {
+            padding-bottom: 13px;
+
+            .container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+
+                .title {
+                    width: 100%;
+                }
+
+                .image {
+                    position: relative;
+                    top: 0;
+                    left: 0;
+                    width: 80%;
+                }
+            }
+        }
+
+
+
+        &__proccesing {
+            .container {
+
+                .phase {
+                    flex-direction: column;
+                    gap: 2rem;
+
+                    .number {
+                        width: 40%;
+                    }
+
+                    .text {
+                        width: 100%;
+
+                        .title {
+                            font-size: 2rem;
+                            text-align: center;
+                        }
+
+                        p {
+                            text-align: justify;
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) {}
